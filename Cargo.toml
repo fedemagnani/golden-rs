@@ -1,0 +1,28 @@
+[package]
+name = "golden-rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bytes = "1.10.1"
+clap = { version = "4.5.50", features = ["derive"] }
+commonware-broadcast = { git = "https://github.com/commonwarexyz/monorepo", rev = "8c07397a10630e0f6cda8aa8abd4047b6d682ffc" }
+commonware-codec = { git = "https://github.com/commonwarexyz/monorepo", rev = "8c07397a10630e0f6cda8aa8abd4047b6d682ffc" }
+commonware-consensus = { git = "https://github.com/commonwarexyz/monorepo", rev = "8c07397a10630e0f6cda8aa8abd4047b6d682ffc" }
+commonware-cryptography = { git = "https://github.com/commonwarexyz/monorepo", rev = "8c07397a10630e0f6cda8aa8abd4047b6d682ffc" }
+commonware-macros = { git = "https://github.com/commonwarexyz/monorepo", rev = "8c07397a10630e0f6cda8aa8abd4047b6d682ffc" }
+commonware-p2p = { git = "https://github.com/commonwarexyz/monorepo", rev = "8c07397a10630e0f6cda8aa8abd4047b6d682ffc" }
+commonware-resolver = { git = "https://github.com/commonwarexyz/monorepo", rev = "8c07397a10630e0f6cda8aa8abd4047b6d682ffc" }
+commonware-runtime = { git = "https://github.com/commonwarexyz/monorepo", rev = "8c07397a10630e0f6cda8aa8abd4047b6d682ffc" }
+commonware-storage = { git = "https://github.com/commonwarexyz/monorepo", rev = "8c07397a10630e0f6cda8aa8abd4047b6d682ffc" }
+commonware-utils = { git = "https://github.com/commonwarexyz/monorepo", rev = "8c07397a10630e0f6cda8aa8abd4047b6d682ffc" }
+futures = "0.3.31"
+governor = "0.6.3"
+prometheus-client = "0.24.0"
+rand = "0.8.5"
+rand_core = "0.6.4"
+serde = "1.0.228"
+serde_json = "1.0.145"
+thiserror = "2.0.17"
+tokio = "1.48.0"
+tracing = "0.1.41"
