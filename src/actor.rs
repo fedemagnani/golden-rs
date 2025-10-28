@@ -10,9 +10,9 @@ use commonware_cryptography::bls12381::PublicKey;
 use commonware_macros::select;
 use commonware_p2p::Recipients;
 use commonware_p2p::{Receiver, Sender};
-use commonware_runtime::tokio::Context;
 use commonware_runtime::Spawner;
-use commonware_runtime::{spawn_cell, Clock, ContextCell, Handle};
+use commonware_runtime::tokio::Context;
+use commonware_runtime::{Clock, ContextCell, Handle, spawn_cell};
 use commonware_utils::set::Ordered;
 use rand::thread_rng;
 use tracing::{debug, error, info, trace};
@@ -207,6 +207,8 @@ impl Actor {
                     .verify_threshod_signature(self.t as u32, group.as_ref())
                     .inspect_err(|e| error!("Error verifying threshold signature: {e}"))
                     .unwrap();
+
+                info!("Greetings verified! exiting :)");
                 return Ok(());
             }
         }
